@@ -50,3 +50,11 @@
   .lightText {
     color: #666;
   }
+
+  .maxHeight {
+    max-height: 33vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

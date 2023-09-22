@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Nelson Alayón';
+const name = 'Nelson Andrés Alayón';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
@@ -30,11 +30,10 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
+              src="/images/yo.jpg"              
+              height= {130} 
+              width={100}
+              alt=""              
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
@@ -43,10 +42,9 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
+                src="/images/yo.jpg"                
+                height={130}
+                width={100}
                 alt=""
               />
             </Link>
@@ -59,7 +57,7 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {home && (
+      {!home && (
         <div className={styles.backToHome}>
           <Link href="/">Back to home</Link>
         </div>
